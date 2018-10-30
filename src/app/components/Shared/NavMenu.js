@@ -4,9 +4,7 @@ import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './NavMenu.css';
 
-export class NavMenu extends Component {
-  displayName = NavMenu.name;
-
+export default class NavMenu extends Component {
   render() {
     return (
       <Navbar inverse fixedTop fluid collapseOnSelect>

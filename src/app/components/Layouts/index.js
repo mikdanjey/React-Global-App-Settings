@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Col, Grid, Row } from 'react-bootstrap';
-import { NavMenu } from './NavMenu';
+import NavMenu from '../Shared/NavMenu';
 
-export class Layout extends Component {
+export default class Layouts extends Component {
   render() {
     return (
       <Grid fluid>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
+export default class FetchData extends Component {
 
   constructor(props) {
     super(props);
@@ -12,12 +12,16 @@ export class FetchData extends Component {
   }
 
   componentDidMount(){
+    this.fetchDataFromCloud();
+  }
+
+  fetchDataFromCloud = () => {
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then(response => response.json())
     .then(data => {
       this.setState({ forecasts: data, loading: false });
     });
-  }
+  };
 
   static renderForecastsTable(forecasts) {
     return (
